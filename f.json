@@ -1,0 +1,17 @@
+/**/
+callbackFunction({
+    "query": {
+        "count": 1,
+        "created": "2016-02-29T20:49:37Z",
+        "lang": "en-GB",
+        "results": {
+            "channel": {
+                "wind": {
+                    "chill": "53",
+                    "direction": "260",
+                    "speed": "15"
+                }
+            }
+        }
+    }
+});
