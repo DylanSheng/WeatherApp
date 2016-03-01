@@ -1,0 +1,25 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "cross-plant app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanSheng/WeatherApp.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "dylansheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DylanSheng/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/DylanSheng/WeatherApp#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
