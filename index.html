@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Weather</title>
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+    <form name="weatherSearch">
+        location:
+        <input type="text" id="location">
+        <input type="button" value="submit" onclick="cli()">
+    </form>
+    <p id="demo"></p>
+    <script>
+        var callbackFunction = function (data) {
+            var tempe = data.query.results.channel.item.condition.temp;
+            document.write(tempe);
+        };
+    </script>
+
+    <script src="https://query.yahooapis.com/v1/public/yql?q=select item.condition.temp from weather.forecast where woeid in (select woeid from geo.places(1) where text='edmonton, ab')&format=json&callback=callbackFunction"></script>
+
+    <script>
+        function cli() {
+            var x = document.getElementById("location).value;
+                document.getElementById("demo").innerHTML = x
+            }
+    </script>
+</body>
+
+</html>
